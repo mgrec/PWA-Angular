@@ -1,0 +1,18 @@
+<div class="fav_title">Personnages</div>
+<mat-card *ngFor="let peopleSaveInfo of peopleSaveInfos">
+    <mat-card-title>Nom : {{peopleSaveInfo.name}}</mat-card-title>
+    <mat-card-content>Genre : {{peopleSaveInfo.gender}}</mat-card-content>
+</mat-card>
+
+<div class="fav_title">Plantes</div>
+<mat-card *ngFor="let planetSaveInfo of planetSaveInfos">
+    <mat-card-title>Nom : {{planetSaveInfo.name}}</mat-card-title>
+    <mat-card-content>Population : {{planetSaveInfo.population}}</mat-card-content>
+</mat-card>
+
+<div class="fav_title">Vaisseaux</div>
+<mat-card *ngFor="let starshipsSaveInfo of starshipsSaveInfos">
+    <mat-card-title>Nom : {{starshipsSaveInfo.name}}</mat-card-title>
+    <mat-card-content>Fabricant : {{starshipsSaveInfo.manufacturer}}</mat-card-content>
+</mat-card>
+

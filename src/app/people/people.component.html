@@ -1,5 +1,5 @@
-<h2>Liste des personnages : </h2>
-<div *ngFor="let people of peoples">
-    <h2>{{people.name}}</h2>
-    <p>{{people.gender}}</p>
-</div>
+<mat-card *ngFor="let people of peoples">
+    <mat-card-title>Nom : {{people.name}}</mat-card-title>
+    <mat-card-content>Genre : {{people.gender}}</mat-card-content>
+    <mat-icon (click)="saveToFav(people.url)" class="icon-list-fav" aria-hidden="false" aria-label="favorite_border icon">favorite_border</mat-icon>
+</mat-card>

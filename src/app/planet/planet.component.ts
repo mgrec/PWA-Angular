@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class PlanetComponent implements OnInit {
 
   planets;
+  planetSave;
 
   constructor() { }
 
@@ -20,5 +21,20 @@ export class PlanetComponent implements OnInit {
         });
 
   }
+
+    saveToFav(url) {
+
+        this.planetSave = JSON.parse(localStorage.getItem('planet_fav'));
+        console.log(this.planetSave);
+
+        if (this.planetSave == null) {
+            this.planetSave = [];
+        }
+
+        this.planetSave.push(url);
+        let planet_fav_save_str = JSON.stringify(this.planetSave);
+
+        localStorage.setItem('planet_fav', planet_fav_save_str);
+    }
 
 }

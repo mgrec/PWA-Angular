@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class StarshipsComponent implements OnInit {
 
   starships;
+  starshipsSave;
 
   constructor() { }
 
@@ -20,5 +21,20 @@ export class StarshipsComponent implements OnInit {
         });
 
   }
+
+    saveToFav(url) {
+
+        this.starshipsSave = JSON.parse(localStorage.getItem('starships_fav'));
+        console.log(this.starshipsSave);
+
+        if (this.starshipsSave == null) {
+            this.starshipsSave = [];
+        }
+
+        this.starshipsSave.push(url);
+        let starships_fav_save_str = JSON.stringify(this.starshipsSave);
+
+        localStorage.setItem('starships_fav', starships_fav_save_str);
+    }
 
 }

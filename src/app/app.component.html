@@ -294,9 +294,16 @@
     }
   }
 </style>
-<a routerLink="/people">People</a>
-<a routerLink="/planets">Planet</a>
-<a routerLink="/starships">Starships</a>
+
+<mat-toolbar>StarApp</mat-toolbar>
+
+<div class="basic-container">
+    <a mat-button routerLink="/people">People</a>
+    <a mat-button routerLink="/planets">Planet</a>
+    <a mat-button routerLink="/starships">Starships</a>
+    <a mat-button routerLink="/favoris">Favoris</a>
+</div>
+
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
@@ -305,7 +312,5 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-
 
 <router-outlet></router-outlet>

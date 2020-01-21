@@ -1,6 +1,6 @@
-<h2>Liste des planètes : </h2>
-<div *ngFor="let planet of planets">
-    <h2>{{planet.name}}</h2>
-    <p>{{planet.population}}</p>
-</div>
+<mat-card *ngFor="let planet of planets">
+    <mat-card-title>Nom : {{planet.name}}</mat-card-title>
+    <mat-card-content>Population : {{planet.population}}</mat-card-content>
+    <mat-icon (click)="saveToFav(planet.url)" class="icon-list-fav" aria-hidden="false" aria-label="favorite_border icon">favorite_border</mat-icon>
+</mat-card>
 
