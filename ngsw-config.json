@@ -25,5 +25,16 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name": "swapi.co",
+      "urls": ["https://swapi.co/api/"],
+      "cacheConfig": {
+        "maxSize": 3,
+        "maxAge": "7d",
+        "strategy": "freshness"
+      }
+    }
   ]
 }
